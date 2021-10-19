@@ -1,38 +1,42 @@
-.App {
-  text-align: center;
-}
+.App{
+  background-color: #070c1f;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.hero{
+  min-height: 90vh;
 }
-
-.App-header {
-  background-color: #282c34;
+.hero-txt h1{
+ font-size: 5rem;
+}
+.header{
+  position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+  background-color: #070c1f; 
+}
+.header nav a{
+  text-decoration: none;
+  margin-right: 20px;
+  padding: 5px;
+}
+.navbar-link{
+  margin-left: 20%;
+}
+.header hr{
+  background-color: aqua;
+}
+.services{
+  min-height: 170vh;
+}
+.my-card{
+  background-color: #070c1f; 
+}
+.service-details{
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.shedule-img{
+  margin-left: 33%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login-form{
+  min-height: 100vh;
 }
