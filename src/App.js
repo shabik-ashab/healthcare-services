@@ -14,11 +14,13 @@ import Services from "./Components/Services";
 import Apoinment from './Components/Apoinment';
 import Login from "./Components/Login";
 import Register from "./Components/Register";
+import AuthProvider from "./contexts/AuthProvider";
 
 
 function App() {
   return (
     <div className="App">
+      <AuthProvider>
       <Router>
         <Navbar />
         <Switch>
@@ -47,7 +49,8 @@ function App() {
             <Register />
           </Route>
         </Switch>
-      </Router>
+      </Router> 
+      </AuthProvider>
     </div>
   );
 }
