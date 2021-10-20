@@ -40,3 +40,24 @@
 .login-form{
   min-height: 100vh;
 }
+
+.apoinment{
+  min-height: 100vh;
+}
+.apoinment-input input{
+    background-color: #070c1f;
+    outline: none;
+    border: none;
+    font-size: 1.7rem;
+    border-bottom: 1px solid aqua;
+}
+.label{
+  font-size: 1.3rem;
+}
+.contact{
+  min-height: 100vh;
+}
+.contact-container{
+  background-color: #e9edee ;
+  height: 40vh;
+}

@@ -3,12 +3,15 @@ import Button from 'react-bootstrap/Button';
 import { Link, NavLink } from 'react-router-dom';
 import { BsTelephone} from "react-icons/bs";
 import useAuth from '../hooks/useAuth';
+import useFirebase from '../hooks/useFirebase';
 
 
 
 
 const Navbar = () => {
     const {user,logOut} = useAuth();
+    const {userName} = useFirebase();
+    console.log(userName);
     return (
         <div className="header">
            <nav className="d-flex align-items-center ms-5 flex-wrap">

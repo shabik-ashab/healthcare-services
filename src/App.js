@@ -15,6 +15,7 @@ import Apoinment from './Components/Apoinment';
 import Login from "./Components/Login";
 import Register from "./Components/Register";
 import AuthProvider from "./contexts/AuthProvider";
+import PrivateRoute from "./Components/PrivateRoute";
 
 
 function App() {
@@ -39,9 +40,9 @@ function App() {
           <Route exact path="/contact">
             <Contact />
           </Route>
-          <Route exact path="/apoinment">
+          <PrivateRoute exact path="/apoinment">
             <Apoinment />
-          </Route>
+          </PrivateRoute>
           <Route exact path="/login">
             <Login />
           </Route>
