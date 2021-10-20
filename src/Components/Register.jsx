@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory, useLocation } from 'react-router';
 import UseFirebase from '../hooks/useFirebase';
+
 // import './Login.css';
 // import googleLogo from '../../Images/logo/google-icon.png';
 // import facebookLogo from '../../Images/logo/facebook.png';
@@ -49,26 +50,35 @@ const Login = () => {
   return (
     <>
       <div className='login-form  text-center text-light'>
-        <div className='signIn'>
-          <h3 className='mb-5'>Sign Up</h3>
-          <input
+        <header className="text-center text-light">
+                <p>Signup</p>
+                <h1><span className="text-primary">Please Register </span>To Join</h1>
+            </header>
+         <div className="login-input">
+         <div className="mt-5">
+         <label className="label me-2" for="name">Name:</label>
+         <input
             name='name'
             onBlur={handleChange}
             type='text'
             placeholder='Name'
             required
           />
-          <br />
-          <br />
-          <input
+          
+         </div>
+         <div className="mt-4">
+         <label className="label me-2" for="email">Email:</label>
+         <input
             name='email'
             onBlur={handleChange}
             type='email'
             placeholder='Email'
             required
           />
-          <br />
-          <br />
+          
+         </div>
+          <div className="mt-4">
+          <label className="label me-2" for="pass">Password:</label>
           <input
             name='pass'
             onBlur={handleChange}
@@ -76,14 +86,12 @@ const Login = () => {
             placeholder='Password 6 characters'
             required
           />
-          <br />
-          <br />
-          <button className='btn btn-danger' onClick={handleSubmit}>
+          
+          </div>
+          <button className='btn btn-outline-light text-success mt-2 p-2 px-4 mt-4' onClick={handleSubmit}>
             register
           </button>
-        </div>
-        {/*  */}
-        
+        </div> 
       </div>
     </>
   );

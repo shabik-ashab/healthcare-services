@@ -8,13 +8,13 @@
 .hero-txt h1{
  font-size: 5rem;
 }
-.header{
+/* .header{
   position: -webkit-sticky;
 	position: sticky;
 	top: 0;
   background-color: #070c1f; 
   
-}
+} */
 .header nav a{
   text-decoration: none;
   margin-right: 20px;
@@ -52,6 +52,15 @@
     font-size: 1.7rem;
     border-bottom: 1px solid aqua;
 }
+.login-input input{
+  
+    background-color: #070c1f;
+    outline: none;
+    border: none;
+    font-size: 1.7rem;
+    border-bottom: 1px solid aqua;
+}
+
 .label{
   font-size: 1.3rem;
 }
@@ -74,4 +83,13 @@
 }
 .call-work{
   line-height: 0.5em;
+}
+.footer hr{
+  background-color: aqua;
+}
+.footer-txt {
+  line-height: .5em;
+}
+.footer-link{
+  line-height: .5em;
 }
