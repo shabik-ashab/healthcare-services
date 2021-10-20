@@ -11,7 +11,7 @@ import useFirebase from '../hooks/useFirebase';
 const Navbar = () => {
     const {user,logOut} = useAuth();
     const {userName} = useFirebase();
-    console.log(userName);
+    // console.log(userName);
     return (
         <div className="header">
            <nav className="d-flex align-items-center ms-5 flex-wrap">

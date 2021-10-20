@@ -16,6 +16,8 @@ import Login from "./Components/Login";
 import Register from "./Components/Register";
 import AuthProvider from "./contexts/AuthProvider";
 import PrivateRoute from "./Components/PrivateRoute";
+import NotFound from './Components/NotFound';
+import Footer from "./Components/Footer";
 
 
 function App() {
@@ -49,7 +51,11 @@ function App() {
           <Route exact path="/register">
             <Register />
           </Route>
+          <Route path="*">
+            <NotFound></NotFound>
+          </Route>
         </Switch>
+        <Footer />
       </Router> 
       </AuthProvider>
     </div>

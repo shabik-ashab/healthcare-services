@@ -7,7 +7,7 @@ const Apoinment = () => {
         <div  className="apoinment text-light"> 
              <header className="text-center text-light">
                 <p>We are always ready to help you</p>
-                <h1><span className="text-primary">Book An</span>Appoinment</h1>
+                <h1><span className="text-primary">Book An </span>Appoinment</h1>
             </header>
             <div className="apoinment-input text-center">
             <div className="input-name mt-5">

@@ -13,6 +13,7 @@
 	position: sticky;
 	top: 0;
   background-color: #070c1f; 
+  
 }
 .header nav a{
   text-decoration: none;
@@ -59,5 +60,18 @@
 }
 .contact-container{
   background-color: #e9edee ;
-  height: 40vh;
+  min-height: 50vh;
+}
+.popup img{
+  background-color: azure;
+  /* height: 50px; */
+  /* width: 50px; */
+  /* padding: 20px; */
+  transition: all .2s ease-in-out; 
+}
+.popup img:hover {
+  transform: scale(1.1); 
+}
+.call-work{
+  line-height: 0.5em;
 }

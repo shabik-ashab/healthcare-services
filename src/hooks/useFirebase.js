@@ -1,26 +1,42 @@
 import { useState, useEffect } from 'react';
 import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import initializeAuthentication from '../Firebase/firebase.init';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 
 initializeAuthentication();
 
 const useFirebase = () => {
     const [user, setUser] = useState({});
-    const [userName,setUserName] = useState("");
+    const [userName,setUserName] = useState([]);
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState("");
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
 
+ 
+       
+
     const createUserWithEmail = (name,email,password) => {
-        setUserName(name);
         
         
         createUserWithEmailAndPassword (auth, email, password)
         .then((result) => {
             setUser(result.user)
+            console.log(result.user)
         })
-        .finally(() => { setLoading(false) });
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            if (errorCode === 'auth/email-already-in-use') {
+                alert('already registered');
+               } else {
+                alert(errorMessage);
+                 }
+        })
+    }
+
+    const setName= (name) => {
+           setUserName(name)
     }
     // console.log(userName)
     const signInWithEmail = (email,password) => {
@@ -29,8 +45,15 @@ const useFirebase = () => {
             setUser(result.user)
         })
         .catch((error) => {
-            setError(error);
-          });
+            // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        if (errorCode === 'auth/wrong-password') {
+         alert('Wrong password.');
+        } else {
+         alert(errorMessage);
+          }
+      });
     }
 
 
@@ -69,6 +92,8 @@ const useFirebase = () => {
         createUserWithEmail,
         signInWithEmail,
         userName,
+        setName,
+        error,
         logOut
     }
 }
