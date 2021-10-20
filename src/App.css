@@ -53,12 +53,12 @@
     border-bottom: 1px solid aqua;
 }
 .login-input input{
-  
     background-color: #070c1f;
     outline: none;
     border: none;
     font-size: 1.7rem;
     border-bottom: 1px solid aqua;
+    color: azure;
 }
 
 .label{
